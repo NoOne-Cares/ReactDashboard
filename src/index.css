@@ -1,0 +1,46 @@
+@import "tailwindcss";
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+}
+
+.dark {
+  --background: #130202;
+  --foreground: #ffffff;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@media (prefers-color-scheme: dark){
+  :root{
+  --background: #130202;
+  --foreground: #ffffff;
+  }
+}
+
+@theme inline{
+  --color-background : var(--background);
+  --color-foreground : var(--foreground);
+}
+
+@theme{
+  --color-primary-bg-light: rgba(255, 255, 255, 1);
+  --color-secondary-bg-light: rgba(247, 249, 251, 1);
+  --color-tirtary-bg-light:rgba(28, 28, 28, 0.05);
+  --color-primary-text-light : rgba(28, 28, 28, 1);
+  --color-secondry-text-light : rgba(28, 28, 28, 0.4);
+  --color-tirtary-text-light : rgba(28, 28, 28, 0.2);
+
+  /* dark mode */
+  --color-primary-bg-dark: rgba(28, 28, 28, 1);
+  --color-secondary-bg-dark:rgba(255, 255, 255, 0.1);
+  --color-primary-text-dark :rgba(255, 255, 255, 1);
+  --color-secondry-text-dark :rgba(255, 255, 255, 0.4);
+  --color-tirtary-text-dark: rgba(255, 255, 255, 0.2);
+
+}
+.body{
+  background: var(--foreground);
+  color: var(--background);
+}
+

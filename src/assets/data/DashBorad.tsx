@@ -1,7 +1,7 @@
-import FolderIcon from "../FolderIcon";
+import FolderIcon from "../Icons/FolderIcon";
 import BookIcon from "../Icons/BookIcon";
-import PieCharIcon from "../PieCharIcon";
-import ShoppingIcon from "../ShoppingIcon";
+import PieCharIcon from "../Icons/PieCharIcon";
+import ShoppingIcon from "../Icons/ShoppingIcon";
 
 export const LeftDasBordData = [
     {

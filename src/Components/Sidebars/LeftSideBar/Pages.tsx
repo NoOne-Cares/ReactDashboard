@@ -1,6 +1,3 @@
-// import { RightArrow } from "../../../assets"
-// import { LeftDasBordData } from "../../../assets/data/DashBorad"
-
 import { RightArrow } from "../../../assets"
 import { PagesData } from "../../../assets/data/PagesData"
 
@@ -18,24 +15,25 @@ const Pages = () => {
                             <div>
                                 {item.icon}
                             </div>
-                            <div>
+                            <div className="text-primary-text-light dark:text-primary-text-dark">
                                 {item.name}
                             </div>
 
                         </div>
                         {item.subPage.length > 0 ?
                             item.subPage.map(item =>
-                                <div id={item.name} className="pl-14 py-1">
+                                <div id={item.name} className="pl-14 py-1 text-primary-text-light dark:text-primary-text-dark">
                                     {item.name}
-                                </div>
+                                </div >
 
                             )
                             :
                             <></>
                         }
                     </>
-                )}
-        </div>
+                )
+            }
+        </div >
     )
 }
 

@@ -4,7 +4,7 @@ import {
     SearchIcon
 } from "../../assets"
 import { useAtom } from "jotai";
-import { showLeftSidebarAtom, showRightSidebarAtom } from "../../store/store.ts";
+import { showLeftSidebarAtom, showRightSidebarAtom, isDark } from "../../store/store.ts";
 
 
 
@@ -13,11 +13,14 @@ const Navbar = () => {
 
     const [, setShowLeftSidebar] = useAtom(showLeftSidebarAtom);
     const [, setShowRightSidebar] = useAtom(showRightSidebarAtom);
+    const [, setIsDark] = useAtom(isDark)
 
-    function chnageTheme() {
-        const isDark = document.documentElement.classList.toggle("dark");
-        const newTheme = isDark ? "dark" : "light";
+    function changeTheme() {
+        const isNowDark = document.documentElement.classList.toggle("dark");
+        const newTheme = isNowDark ? "dark" : "light";
+
         localStorage.setItem("theme", newTheme);
+        setIsDark(isNowDark);
     }
 
     return (
@@ -41,7 +44,7 @@ const Navbar = () => {
                         <Comand />
                     </div>
                     <div className="flex gap-2">
-                        <div onClick={chnageTheme} >
+                        <div onClick={changeTheme} >
                             <Sun />
                         </div>
                         <Clock />

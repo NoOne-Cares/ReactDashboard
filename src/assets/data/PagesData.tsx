@@ -1,8 +1,8 @@
-import AccountIcon from "../AccountIcon";
-import BlogIcons from "../BlogIcons";
-import PeopleIcon from "../PeopleIcon";
-import SocailIcon from "../SocailIcon";
-import UserIcon from "../UserIcon";
+import AccountIcon from "../Icons/AccountIcon";
+import BlogIcons from "../Icons/BlogIcons";
+import PeopleIcon from "../Icons/PeopleIcon";
+import SocailIcon from "../Icons/SocailIcon";
+import UserIcon from "../Icons/UserIcon";
 
 export const PagesData = [
     {

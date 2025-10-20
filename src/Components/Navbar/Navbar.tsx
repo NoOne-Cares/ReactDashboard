@@ -4,7 +4,7 @@ import {
     SearchIcon
 } from "../../assets"
 import { useAtom } from "jotai";
-import { showLeftSidebarAtom, showRightSidebarAtom, isDark } from "../../store/store.ts";
+import { showLeftSidebarAtom, showRightSidebarAtom, isDark, shwoOrder } from "../../store/store.ts";
 
 
 
@@ -14,6 +14,7 @@ const Navbar = () => {
     const [, setShowLeftSidebar] = useAtom(showLeftSidebarAtom);
     const [, setShowRightSidebar] = useAtom(showRightSidebarAtom);
     const [, setIsDark] = useAtom(isDark)
+    const [, setShowOrders] = useAtom(shwoOrder)
 
     function changeTheme() {
         const isNowDark = document.documentElement.classList.toggle("dark");
@@ -21,6 +22,10 @@ const Navbar = () => {
 
         localStorage.setItem("theme", newTheme);
         setIsDark(isNowDark);
+    }
+
+    function chnageShoeOrder() {
+        setShowOrders(prev => !prev)
     }
 
     return (
@@ -48,7 +53,10 @@ const Navbar = () => {
                             <Sun />
                         </div>
                         <Clock />
-                        <Bell />
+                        <div onClick={chnageShoeOrder}>
+                            <Bell />
+                        </div>
+
                         <div onClick={() => setShowRightSidebar(prev => !prev)}>
                             <RightNavButton />
                         </div>

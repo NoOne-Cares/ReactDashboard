@@ -34,7 +34,7 @@ function App() {
     <div className="grid grid-cols-16 min-h-screen">
       {/* Left Sidebar */}
       {showLeftSidebar && (
-        <div className="col-span-2 h-screen p-2 bg-primary-bg-light dark:bg-primary-bg-dark border-r-2 border-r-gray-300 dark:border-r-tirtary-text-dark">
+        <div className="col-span-2 h-full p-2 bg-primary-bg-light dark:bg-primary-bg-dark border-r-2 border-r-gray-300 dark:border-r-tirtary-text-dark">
           <LeftSideBar />
         </div>
       )}
@@ -47,7 +47,7 @@ function App() {
 
       {/* Right Sidebar */}
       {showRightSidebar && (
-        <div className="col-span-3 h-screen p-2 bg-primary-bg-light dark:bg-primary-bg-dark border-l-2 border-l-gray-300 dark:border-l-tirtary-text-dark">
+        <div className="col-span-3 h-full p-2 bg-primary-bg-light dark:bg-primary-bg-dark border-l-2 border-l-gray-300 dark:border-l-tirtary-text-dark">
           <RightSideBar />
         </div>
       )}

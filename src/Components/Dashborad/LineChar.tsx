@@ -24,16 +24,16 @@ const LineCharts = () => {
     const strokeColor1 = isThemedark ? '#c6c7f8' : '#1c1c1c';
     const strokeColour2 = isThemedark ? '#a8c5da' : '#a8c5da'
     return (
-        <div className="w-full h-full p-6 px-15 bg-[#f7f9fb] dark:bg-[#282828] rounded-2xl">
-            <div className="flex gap-8 text-primary-text-light dark:text-primary-text-dark">
+        <div className="w-full h-full sm:p-8 sm:px-10 p-6 pb-15 sm:pb-6s bg-[#f7f9fb] dark:bg-[#282828] rounded-2xl">
+            <div className="flex sm:gap-8 gap-6 text-primary-text-light dark:text-primary-text-dark">
                 <div className="font-bold">Revenue  </div>
-                <span>|</span>
+                <span className="hidden sm:block">|</span>
                 <div className="flex gap-2 items-center">
-                    <div className="w-2 h-2 rounded-full bg-black dark:bg-[#b2b3de]"></div>
+                    <div className="hidden sm:block w-2 h-2 rounded-full bg-black dark:bg-[#b2b3de]"></div>
                     <div>Current Week <span className="font-bold"> $58,211</span></div>
                 </div>
                 <div className="flex gap-2 items-center">
-                    <div className="w-2 h-2 rounded-full bg-[#a8c5da]"></div>
+                    <div className="w-2 h-2 rounded-full bg-[#a8c5da] hidden sm:block"></div>
                     <div>Previous Week <span className="font-bold">$68,768</span></div>
 
                 </div>

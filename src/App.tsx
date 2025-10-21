@@ -24,17 +24,17 @@ function App() {
   }, []);
 
   const getContentSpan = () => {
-    if (showLeftSidebar && showRightSidebar) return "col-span-11";
-    if (showLeftSidebar && !showRightSidebar) return "col-span-14";
-    if (!showLeftSidebar && showRightSidebar) return "col-span-13";
+    if (showLeftSidebar && showRightSidebar) return "lg:col-span-11 col-span-16";
+    if (showLeftSidebar && !showRightSidebar) return "lg:col-span-14 col-span-16";
+    if (!showLeftSidebar && showRightSidebar) return "lg:col-span-13 col-span-16";
     return "col-span-16";
   };
 
   return (
-    <div className="grid grid-cols-16 h-full min-h-screen bg-primary-bg-light dark:bg-primary-bg-dark">
+    <div className="relative lg:static grid grid-cols-16 h-full min-h-screen bg-primary-bg-light dark:bg-primary-bg-dark">
 
       {showLeftSidebar && (
-        <div className="col-span-2 h-full p-2 bg-primary-bg-light dark:bg-primary-bg-dark border-r-2 border-r-gray-300 dark:border-r-tirtary-text-dark">
+        <div className="absolute z-7 lg:static lg:col-span-2 h-full p-2 bg-primary-bg-light dark:bg-primary-bg-dark border-r-2 border-r-gray-300 dark:border-r-tirtary-text-dark">
           <LeftSideBar />
         </div>
       )}
@@ -45,7 +45,7 @@ function App() {
       </div>
 
       {showRightSidebar && (
-        <div className="col-span-3 h-full p-2 bg-primary-bg-light dark:bg-primary-bg-dark border-l-2 border-l-gray-300 dark:border-l-tirtary-text-dark">
+        <div className=" absolute right-0  z-7 lg:right-auto lg:static lg:col-span-3 h-full p-2 bg-primary-bg-light dark:bg-primary-bg-dark border-l-2 border-l-gray-300 dark:border-l-tirtary-text-dark">
           <RightSideBar />
         </div>
       )}

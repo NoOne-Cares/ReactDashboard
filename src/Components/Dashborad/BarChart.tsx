@@ -19,8 +19,8 @@ const data = [
 
 const BarCharts = () => {
     return (
-        <div className="w-full h-full p-6 px-8 bg-[#f7f9fb] dark:bg-[#282828] rounded-2xl">
-            <div className="font-bold text-primary-text-light dark:text-primary-text-dark">Projections vs Actuals</div>
+        <div className=" relative z-0 w-full h-full sm:p-6 sm:px-8 p-6 px-3 bg-[#f7f9fb] dark:bg-[#282828] rounded-2xl">
+            <div className="font-bold text-primary-text-light dark:text-primary-text-dark pl-4">Projections vs Actuals</div>
             <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={data} margin={{ top: 20, right: 0, left: 0, bottom: 5 }} barSize={20}>
                     <CartesianGrid
@@ -39,11 +39,10 @@ const BarCharts = () => {
                         allowDecimals={false}
                         allowDataOverflow={true}
                         tickCount={3}
-                        axisLine={false}      // <-- hides the vertical axis line
+                        axisLine={false}
                         tickLine={false}
                     />
                     <Tooltip formatter={(value: number) => `${value / 1000000}M`} />
-                    {/* <Legend /> */}
                     <Bar dataKey="pv" stackId="a" fill="#a8c5da" />
                     <Bar dataKey="uv" stackId="a" fill="#cfdfea" radius={[5, 5, 0, 0]} />
 

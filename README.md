@@ -27,7 +27,7 @@ This project provides a clean and modular architecture for building interactive 
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Recharts](https://recharts.org/) (for charts)
-- [Vite](https://vitejs.dev/) or [CRA](https://create-react-app.dev/) (adjust as needed)
+- [Vite](https://vitejs.dev/) 
 
 ---
 

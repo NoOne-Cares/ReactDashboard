@@ -31,7 +31,7 @@ const Navbar = () => {
     return (
         <>
 
-            <div className="flex justify-between bg-primary-bg-light sm:bg-pink-700 md:bg-amber-200 lg:bg-amber-900 dark:bg-primary-bg-dark p-2 align-middle py-3 border-b-gray-300 border-b-2 dark:border-b-tirtary-text-dark">
+            <div className="flex justify-between bg-primary-bg-light  dark:bg-primary-bg-dark p-2 align-middle py-3 border-b-gray-300 border-b-2 dark:border-b-tirtary-text-dark">
                 <div className="flex gap-2 items-center">
                     <div onClick={() => setShowLeftSidebar(prev => !prev)}>
                         <RightNavButton />

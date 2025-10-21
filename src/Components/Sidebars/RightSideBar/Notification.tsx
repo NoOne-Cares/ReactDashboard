@@ -1,4 +1,3 @@
-import React from 'react'
 import { NotificationData } from '../../../assets/data/NotificationData'
 
 const Notification = () => {

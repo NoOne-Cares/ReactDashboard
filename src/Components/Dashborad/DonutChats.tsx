@@ -1,6 +1,16 @@
-import React from "react";
-import { PieChart, Pie, Sector, ResponsiveContainer } from "recharts";
 
+import { PieChart, ResponsiveContainer } from "recharts";
+
+type SectorPathProps = {
+    cx: number;
+    cy: number;
+    innerRadius: number;
+    outerRadius: number;
+    startAngle: number;
+    endAngle: number;
+    cornerRadiusConvex?: number;
+    cornerRadiusConcave?: number;
+}
 const data = [
     { name: "Direct", value: 300.56, id: 1 },
     { name: "Affiliate", value: 135.18, id: 2 },
@@ -21,7 +31,7 @@ const createCustomSectorPath = ({
     endAngle,
     cornerRadiusConvex = 10,
     cornerRadiusConcave = 10,
-}) => {
+}: SectorPathProps): string => {
     const startAngleRad = (startAngle - 90) * RADIAN;
     const endAngleRad = (endAngle - 90) * RADIAN;
 
@@ -49,8 +59,19 @@ const createCustomSectorPath = ({
     Z
   `;
 };
+interface CustomSectorProps {
+    cx: number;
+    cy: number;
+    innerRadius: number;
+    outerRadius: number;
+    startAngle: number;
+    endAngle: number;
+    fill?: string;
+    cornerRadiusConvex?: number;
+    cornerRadiusConcave?: number;
+}
 
-const CustomSector = (props) => {
+const CustomSector: React.FC<CustomSectorProps> = (props) => {
     const {
         cx,
         cy,

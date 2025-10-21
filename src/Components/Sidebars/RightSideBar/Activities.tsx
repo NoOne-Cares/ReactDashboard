@@ -1,4 +1,3 @@
-import React from 'react'
 import { ActivityData } from '../../../assets/data/ActivitesData'
 
 const Activities = () => {

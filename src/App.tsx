@@ -31,21 +31,19 @@ function App() {
   };
 
   return (
-    <div className="grid grid-cols-16 min-h-screen">
-      {/* Left Sidebar */}
+    <div className="grid grid-cols-16 h-full min-h-screen bg-primary-bg-light dark:bg-primary-bg-dark">
+
       {showLeftSidebar && (
         <div className="col-span-2 h-full p-2 bg-primary-bg-light dark:bg-primary-bg-dark border-r-2 border-r-gray-300 dark:border-r-tirtary-text-dark">
           <LeftSideBar />
         </div>
       )}
 
-      {/* Main Content */}
       <div className={clsx(getContentSpan())}>
         <Navbar />
         <Dashborad />
       </div>
 
-      {/* Right Sidebar */}
       {showRightSidebar && (
         <div className="col-span-3 h-full p-2 bg-primary-bg-light dark:bg-primary-bg-dark border-l-2 border-l-gray-300 dark:border-l-tirtary-text-dark">
           <RightSideBar />
